@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="dist/output.css" rel="stylesheet">
+  <title>My Portfolio</title>
+</head>
+<body>
+  <header class="flex justify-between items-center py-3 px-8 lg:px-14 shadow-md bg-white sticky top-0">
+    <a href="#"><h1 class="text-xl font-semibold">Ade Lintang</h1></a>
+    <nav class="hidden md:block" id="navbar">
+      <ul class="flex flex-col items-center gap-10 py-4 bg-white shadow-md fixed right-0 top-0 w-[70%] md:flex md:flex-row md:static md:gap-x-5 md:shadow-none md:py-0">
+        <li><a href="#about" class="font-medium hover:text-[#2F74C8]">About</a></li>
+        <li><a href="#portfolio" class="font-medium hover:text-[#2F74C8]">Portfolio</a></li>
+        <li><a href="#contacts" class="font-medium hover:text-[#2F74C8]">Contacts</a></li>
+      </ul>
+    </nav>
+    <button class="md:hidden block z-10" id="hamburger-btn">
+      <img src="dist/icons/hamburger.png" alt="hamburger-icon" class="w-[30px]">
+    </button>
+  </header>
+  <section id="about" class="my-10 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto">
+    <h2 class="text-lg font-semibold text-[#aaa]">#about</h2>
+    <p class="mt-4">Saya adalah seorang mahasiswa dan sekarang tinggal di kota Surakarta, saya tertarik untuk menekuni bidang Web Development semenjak kuliah. Saya belajar banyak hal tentang Web Devolpment beserta teknologi-teknologinya seperti HTML, CSS, Javascript. Dan sekarang saya mulai belajar Typescript sebagai strongly type dari Javascript.</p>
+  </section>
+  <section id="portfolio" class="my-10 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto">
+    <h2 class="text-lg font-semibold text-[#aaa]">#portfolio</h2>
+    <div class="mt-4 grid gap-6 grid-cols-1 md:grid-cols-2">
+      <div class="bg-white shadow-md rounded-md">
+        <img src="dist/img/jadwal-plus.png" alt="jadwal-plus" class="rounded-t-md">
+        <div class="p-4">
+          <a href="https://jadwalplus-client.vercel.app/" target="_blank" rel="noopener noreferrer" class="underline">
+            <h3 class="text-lg font-semibold">Jadwal Plus</h3>
+          </a>
+          <p class="mt-3">Aplikasi untuk manajemen penjadwalan kegiatan</p>
+          <a href="https://github.com/mengcapstone/jadwalplus-client" target="_blank" rel="noopener noreferrer" class="underline text-[#2F74C8]">Repository</a>
+        </div>
+        <div class="px-4 mb-4 flex gap-3 flex-wrap">
+          <p class="bg-[#eee] py-1 px-2 rounded-full text-slate-600">#react</p>
+          <p class="bg-[#eee] py-1 px-2 rounded-full text-slate-600">#redux</p>
+          <p class="bg-[#eee] py-1 px-2 rounded-full text-slate-600">#tailwind</p>
+        </div>
+      </div>
+      <div class="bg-white shadow-md rounded-md">
+        <img src="dist/img/jadwal-plus-api.png" alt="jadwal-plus-api" class="rounded-t-md">
+        <div class="p-4">
+          <a href="https://api-jadwalplus-production.up.railway.app/docs/" target="_blank" rel="noopener noreferrer" class="underline">
+            <h3 class="text-lg font-semibold">Jadwal Plus API</h3>
+          </a>
+          <p class="mt-3">Rest API untuk manajemen penjadwalan kegiatan (Jadwal Plus)</p>
+          <a href="https://github.com/mengcapstone/jadwalplus-api" target="_blank" rel="noopener noreferrer" class="underline text-[#2F74C8]">Repository</a>
+        </div>
+        <div class="px-4 mb-4 flex gap-3 flex-wrap">
+          <p class="bg-[#eee] py-1 px-2 rounded-full text-slate-600">#express</p>
+          <p class="bg-[#eee] py-1 px-2 rounded-full text-slate-600">#jsonwebtoken</p>
+          <p class="bg-[#eee] py-1 px-2 rounded-full text-slate-600">#bcrypt</p>
+          <p class="bg-[#eee] py-1 px-2 rounded-full text-slate-600">#mongodb</p>
+        </div>
+      </div>
+      <div class="bg-white shadow-md rounded-md">
+        <img src="dist/img/forum-app.png" alt="forum-app" class="rounded-t-md">
+        <div class="p-4">
+          <a href="https://forum-app-six.vercel.app/" target="_blank" rel="noopener noreferrer" class="underline">
+            <h3 class="text-lg font-semibold">Forum App</h3>
+          </a>
+          <p class="mt-3">Aplikasi Forum Diskusi</p>
+          <a href="https://github.com/adelintang/forum-app-v2" target="_blank" rel="noopener noreferrer" class="underline text-[#2F74C8]">Repository</a>
+        </div>
+        <div class="px-4 mb-4 flex gap-3 flex-wrap">
+          <p class="bg-[#eee] py-1 px-2 rounded-full text-slate-600">#react</p>
+          <p class="bg-[#eee] py-1 px-2 rounded-full text-slate-600">#redux</p>
+          <p class="bg-[#eee] py-1 px-2 rounded-full text-slate-600">#tailwind</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contacts" class="my-10 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto">
+    <h2 class="text-lg font-semibold text-[#aaa]">#contacts</h2>
+    <div class="mt-4 flex justify-center md:justify-start gap-6">
+      <a href="" target="_blank" rel="noopener noreferrer">
+        <img src="dist/icons/github.png" alt="github-icon" class="w-8">
+      </a>
+      <a href="" target="_blank" rel="noopener noreferrer">
+        <img src="dist/icons/linkedin.png" alt="linkedin-icon" class="w-8">
+      </a>
+      <a href="" target="_blank" rel="noopener noreferrer">
+        <img src="dist/icons/instagram.png" alt="instagram-icon" class="w-8">
+      </a>
+    </div>
+  </section>
+  <footer class="bg-black p-4">
+    <p class="text-white text-center">&copy; 2023 JadwalPlus. All rights reserved.</p>
+  </footer>
+</body>
+<script>
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const navbar = document.getElementById('navbar');
+
+  hamburgerBtn.addEventListener('click', () => {
+    navbar.classList.toggle('hidden');
+  });
+</script>
+</html>

@@ -16,9 +16,9 @@
     <nav class="hidden md:block" id="navbar">
       <ul
         class="flex flex-col items-center gap-10 py-4 bg-white dark:bg-dark shadow dark:shadow-slate-700 fixed right-0 top-0 w-[50%] md:flex md:flex-row md:static md:gap-x-8 md:shadow-none md:py-0">
-        <li><a href="#about" class="font-medium dark:text-white hover:text-[#2F74C8]">About</a></li>
-        <li><a href="#portfolio" class="font-medium dark:text-white hover:text-[#2F74C8]">Portfolio</a></li>
-        <li><a href="#socials" class="font-medium dark:text-white hover:text-[#2F74C8]">Socials</a></li>
+        <li><a href="#about" class="font-medium dark:text-white hover:text-[#2F74C8] dark:hover:text-[#2F74C8]">About</a></li>
+        <li><a href="#portfolio" class="font-medium dark:text-white hover:text-[#2F74C8] dark:hover:text-[#2F74C8]">Portfolio</a></li>
+        <li><a href="#socials" class="font-medium dark:text-white hover:text-[#2F74C8] dark:hover:text-[#2F74C8]">Socials</a></li>
         <li>
           <div class="flex">
             <span class="mr-2 text-sm tex-slate-500 dark:text-white">light</span>
@@ -34,7 +34,9 @@
       </ul>
     </nav>
     <button class="md:hidden block z-10" id="hamburger-btn">
-      <img src="dist/icons/hamburger.png" alt="hamburger-icon" class="w-[30px]">
+      <span class="dark:bg-white hamburger-line mb-1.5"></span>
+      <span class="dark:bg-white hamburger-line mb-1.5"></span>
+      <span class="dark:bg-white hamburger-line"></span>
     </button>
   </header>
   <section class="dark:bg-dark">
@@ -48,7 +50,7 @@
       <img src="dist/img/adelintang.png" alt="adelintang" class="w-[400px]">
     </div>
   </section>
-  <section id="about" class="py-10 bg-[#EDEEF0] dark:bg-slate-800">
+  <section id="about" class="pt-14 pb-10 bg-[#EDEEF0] dark:bg-slate-800">
     <div class="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto">
       <h2 class="text-lg font-semibold text-[#aaa]">#about</h2>
       <p class="mt-4 dark:text-white">Saya adalah seorang mahasiswa dan sekarang tinggal di kota Surakarta, saya
@@ -66,7 +68,7 @@
       </div>
     </div>
   </section>
-  <section id="portfolio" class="py-10 dark:bg-dark">
+  <section id="portfolio" class="pt-14 pb-10 dark:bg-dark">
     <div class="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto">
       <h2 class="text-lg font-semibold text-[#aaa]">#portfolio</h2>
       <div class="mt-4 grid gap-6 grid-cols-1 md:grid-cols-2">
@@ -123,7 +125,7 @@
       </div>
     </div>
   </section>
-  <section id="socials" class="py-10 bg-[#EDEEF0] dark:bg-slate-800">
+  <section id="socials" class="pt-14 pb-10 bg-[#EDEEF0] dark:bg-slate-800">
     <div class="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto">
       <h2 class="text-lg font-semibold text-[#aaa]">#socials</h2>
       <div class="mt-4 flex justify-center md:justify-start gap-6">

@@ -12,6 +12,10 @@
   }
 }
 
+.hamburger-line {
+  @apply w-[30px] h-[2px] block bg-dark rounded-md;
+}
+
 #dark-toggle:checked ~ label div.toggle-circle {
   @apply translate-x-3;
 }

@@ -8,7 +8,7 @@ export default function Profile() {
           <p className="text-2xl font-semibold dark:text-white">Ade Lintang Permono</p>
           <p className="dark:text-white">Fullstack Javascript | Informatics Engineering Student</p>
         </div>
-        <img src="/img/adelintang.png" alt="adelintang" className="w-[400px]" />
+        <img src="/img/adelintang.png" alt="adelintang" className="w-[400px]" loading="lazy" />
       </div>
     </section>
   )

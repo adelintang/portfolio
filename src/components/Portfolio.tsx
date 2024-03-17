@@ -1,59 +1,85 @@
+interface Portfolio {
+  picture: string
+  alt: string
+  urlApp: string
+  name: string
+  description: string
+  repository: string
+  techs: Techs[]
+}
+
+interface Techs {
+  icon: string
+  alt: string
+}
+
+const portfolios: Portfolio[] = [
+  {
+    picture: '/img/jadwal-plus.PNG',
+    alt: 'jadwal-plus',
+    urlApp: 'https://jadwalplus-client.vercel.app/',
+    name: 'Jadwal Plus',
+    description: 'Aplikasi untuk manajemen penjadwalan kegiatan',
+    repository: 'https://github.com/mengcapstone/jadwalplus-client',
+    techs: [
+      { icon: '/icons/react.svg', alt: 'react-icon' },
+      { icon: '/icons/redux.svg', alt: 'redux-icon' },
+      { icon: '/icons/tailwindcss.svg', alt: 'tailwindcss-icon' }
+    ]
+  },
+  {
+    picture: '/img/jadwal-plus-api.PNG',
+    alt: 'jadwal-plus-api',
+    urlApp: 'https://jadwalplus-api-production.up.railway.app/docs/',
+    name: 'Jadwal Plus API',
+    description: 'Rest API untuk manajemen penjadwalan kegiatan (Jadwal Plus)',
+    repository: 'https://github.com/mengcapstone/jadwalplus-api',
+    techs: [
+      { icon: '/icons/nodedotjs.svg', alt: 'nodedotjs-icon' },
+      { icon: '/icons/express.svg', alt: 'express-icon' },
+      { icon: '/icons/jsonwebtokens.svg', alt: 'jsonwebtokens-icon' },
+      { icon: '/icons/mongodb.svg', alt: 'mongodb-icon' }
+    ]
+  },
+  {
+    picture: '/img/forum-app.PNG',
+    alt: 'forum-app',
+    urlApp: 'https://forum-app-six.vercel.app/',
+    name: 'Forum App',
+    description: 'Aplikasi Forum Diskusi',
+    repository: 'https://github.com/adelintang/forum-app-v2',
+    techs: [
+      { icon: '/icons/react.svg', alt: 'react-icon' },
+      { icon: '/icons/redux.svg', alt: 'redux-icon' },
+      { icon: '/icons/tailwindcss.svg', alt: 'tailwindcss-icon' }
+    ]
+  },
+]
+
 export default function Portfolio() {
   return (
     <section id="portfolio" className="pt-14 pb-10 dark:bg-dark">
       <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto">
         <h2 className="text-lg font-semibold text-[#aaa]">#portfolio</h2>
         <div className="mt-4 grid gap-6 grid-cols-1 md:grid-cols-2">
-          <div className="bg-white dark:bg-[#14213D] shadow-md rounded-md">
-            <img src="/img/jadwal-plus.PNG" alt="jadwal-plus" className="rounded-t-md" />
-            <div className="p-4">
-              <a href="https://jadwalplus-client.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline">
-                <h3 className="text-lg font-semibold dark:text-white">Jadwal Plus</h3>
-              </a>
-              <p className="mt-3 dark:text-white">Aplikasi untuk manajemen penjadwalan kegiatan</p>
-              <a href="https://github.com/mengcapstone/jadwalplus-client" target="_blank" rel="noopener noreferrer"
-                className="underline text-[#2F74C8]">Repository</a>
+          {portfolios.map((portfolio, index) => (
+            <div className="bg-white dark:bg-[#14213D] shadow-md rounded-md" key={index}>
+              <img src={portfolio.picture} alt={portfolio.alt} className="rounded-t-md" />
+              <div className="p-4">
+                <a href={portfolio.urlApp} target="_blank" rel="noopener noreferrer" className="underline">
+                  <h3 className="text-lg font-semibold dark:text-white">{portfolio.name}</h3>
+                </a>
+                <p className="mt-3 dark:text-white">{portfolio.description}</p>
+                <a href={portfolio.repository} target="_blank" rel="noopener noreferrer"
+                  className="underline text-[#2F74C8]">Repository</a>
+              </div>
+              <div className="px-4 mb-4 flex gap-3">
+                {portfolio.techs.map((tech, index) => (
+                  <img src={tech.icon} alt={tech.alt} className="w-8" key={index} />
+                ))}
+              </div>
             </div>
-            <div className="px-4 mb-4 flex gap-3">
-              <img src="/icons/react.svg" alt="react-icon" className="w-8" />
-              <img src="/icons/redux.svg" alt="redux-icon" className="w-8" />
-              <img src="/icons/tailwindcss.svg" alt="tailwindcss-icon" className="w-8" />
-            </div>
-          </div>
-          <div className="bg-white dark:bg-[#14213D] shadow-md rounded-md">
-            <img src="/img/jadwal-plus-api.PNG" alt="jadwal-plus-api" className="rounded-t-md" />
-            <div className="p-4">
-              <a href="https://jadwalplus-api-production.up.railway.app/docs/" target="_blank" rel="noopener noreferrer"
-                className="underline">
-                <h3 className="text-lg font-semibold dark:text-white">Jadwal Plus API</h3>
-              </a>
-              <p className="mt-3 dark:text-white">Rest API untuk manajemen penjadwalan kegiatan (Jadwal Plus)</p>
-              <a href="https://github.com/mengcapstone/jadwalplus-api" target="_blank" rel="noopener noreferrer"
-                className="underline text-[#2F74C8]">Repository</a>
-            </div>
-            <div className="px-4 mb-4 flex gap-3">
-              <img src="/icons/nodedotjs.svg" alt="nodedotjs-icon" className="w-8" />
-              <img src="/icons/express.svg" alt="express-icon" className="w-8" />
-              <img src="/icons/jsonwebtokens.svg" alt="jsonwebtokens-icon" className="w-8" />
-              <img src="/icons/mongodb.svg" alt="mongodb-icon" className="w-8" />
-            </div>
-          </div>
-          <div className="bg-white dark:bg-[#14213D] shadow-md rounded-md">
-            <img src="/img/forum-app.PNG" alt="forum-app" className="rounded-t-md" />
-            <div className="p-4">
-              <a href="https://forum-app-six.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline">
-                <h3 className="text-lg font-semibold dark:text-white">Forum App</h3>
-              </a>
-              <p className="mt-3 dark:text-white">Aplikasi Forum Diskusi</p>
-              <a href="https://github.com/adelintang/forum-app-v2" target="_blank" rel="noopener noreferrer"
-                className="underline text-[#2F74C8]">Repository</a>
-            </div>
-            <div className="px-4 mb-4 flex gap-3">
-              <img src="/icons/react.svg" alt="react-icon" className="w-8" />
-              <img src="/icons/redux.svg" alt="redux-icon" className="w-8" />
-              <img src="/icons/tailwindcss.svg" alt="tailwindcss-icon" className="w-8" />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

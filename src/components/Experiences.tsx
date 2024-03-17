@@ -1,4 +1,12 @@
-const experiences = [
+interface Experience {
+  name: string
+  company: string
+  status: string
+  periode: string
+  program: string
+}
+
+const experiences: Experience[] = [
   {
     name: 'Front End & Back End Student di Dicoding Indonesia',
     company: 'Dicoding Indonesia',
@@ -21,8 +29,8 @@ export default function Experiences() {
       <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto">
         <h2 className="text-lg font-semibold text-[#aaa] mb-2">#experiences</h2>
         {
-          experiences.map((experience) => (
-            <div className="mb-2.5">
+          experiences.map((experience, index) => (
+            <div className="mb-2.5" key={index}>
               <h3 className="text-lg font-semibold">{experience.name}</h3>
               <p className="mt-1 text-sm">{experience.company} - {experience.status}</p>
               <p className="text-sm text-[#aaa]">{experience.periode}</p>

@@ -1,4 +1,11 @@
-const socials = [
+interface Social {
+  urlSocial: string
+  urlIcon: string
+  alt: string
+  name: string
+}
+
+const socials: Social[] = [
   {
     urlSocial: 'https://github.com/adelintang',
     urlIcon: '/icons/github.png',
@@ -26,9 +33,13 @@ export default function Socials() {
         <h2 className="text-lg font-semibold text-[#aaa]">#socials</h2>
         <div className="mt-4 flex justify-center md:justify-start gap-6">
           {
-            socials.map((social) => (
-              <a href={social.urlSocial} target="_blank" rel="noopener noreferrer"
-                className="flex flex-col gap-1 justify-center items-center">
+            socials.map((social, index) => (
+              <a href={social.urlSocial}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col gap-1 justify-center items-center"
+                key={index}
+              >
                 <img src={social.urlIcon} alt={social.alt} className="w-8" />
                 <span className="text-sm dark:text-white">{social.name}</span>
               </a>

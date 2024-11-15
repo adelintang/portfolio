@@ -1,3 +1,16 @@
+import React from "react"
+import {
+  SiTypescript,
+  SiJavascript,
+  SiTailwindcss,
+  SiRedux,
+  SiPrisma,
+  SiMongodb,
+} from "react-icons/si";
+import { FaNodeJs, FaReact } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
+import Tooltip from "./Tooltip";
+
 interface Portfolio {
   picture: string
   alt: string
@@ -6,12 +19,26 @@ interface Portfolio {
   description: string
   repository: string
   techs: Techs[]
+  category: Category
 }
 
 interface Techs {
-  icon: string
-  alt: string
+  icon: string | React.ReactNode
+  tooltipTilte: string
 }
+
+type Category = 'Front-End' | 'Back-End'
+
+const Javascript = <SiJavascript className="text-2xl text-[#F0DB4F] cursor-pointer" />
+const ReactJS = <FaReact className="text-3xl text-[#61DBFB] cursor-pointer" />
+const Redux = <SiRedux className="text-2xl text-[#764abc] cursor-pointer" />
+const TailwindCSS = <SiTailwindcss className="text-3xl text-[#06B6D4] cursor-pointer" />
+const NodeJS = <FaNodeJs className="text-2xl text-[#3C873A] cursor-pointer" />
+const ExpressJS = <img src="/icons/express.svg" alt="express-icon" className="w-8 cursor-pointer" />
+const MongoDB = <SiMongodb className="text-2xl text-[#4DB33D] cursor-pointer" />
+const Typescript = <SiTypescript className="text-2xl text-[#3178c6] cursor-pointer" />
+const Prisma = <SiPrisma className="text-2xl cursor-pointer" />
+const PostgreSQL = <BiLogoPostgresql className="text-2xl text-[#0064a5] cursor-pointer" />
 
 const portfolios: Portfolio[] = [
   {
@@ -22,24 +49,27 @@ const portfolios: Portfolio[] = [
     description: 'Aplikasi untuk manajemen penjadwalan kegiatan',
     repository: 'https://github.com/mengcapstone/jadwalplus-client',
     techs: [
-      { icon: '/icons/react.svg', alt: 'react-icon' },
-      { icon: '/icons/redux.svg', alt: 'redux-icon' },
-      { icon: '/icons/tailwindcss.svg', alt: 'tailwindcss-icon' }
-    ]
+      { icon: Javascript, tooltipTilte: "Javascript" },
+      { icon: ReactJS, tooltipTilte: "ReactJS" },
+      { icon: Redux, tooltipTilte: "Redux" },
+      { icon: TailwindCSS, tooltipTilte: "TailwindCSS" }
+    ],
+    category: 'Front-End'
   },
   {
     picture: '/img/jadwal-plus-api.PNG',
     alt: 'jadwal-plus-api',
-    urlApp: 'https://jadwalplus-api-production.up.railway.app/docs/',
+    urlApp: 'https://api-jadwalplus-production.vercel.app/',
     name: 'Jadwal Plus API',
     description: 'Rest API untuk manajemen penjadwalan kegiatan (Jadwal Plus)',
-    repository: 'https://github.com/mengcapstone/jadwalplus-api',
+    repository: 'https://github.com/adelintang/jadwalplus-api',
     techs: [
-      { icon: '/icons/nodedotjs.svg', alt: 'nodedotjs-icon' },
-      { icon: '/icons/express.svg', alt: 'express-icon' },
-      { icon: '/icons/jsonwebtokens.svg', alt: 'jsonwebtokens-icon' },
-      { icon: '/icons/mongodb.svg', alt: 'mongodb-icon' }
-    ]
+      { icon: Javascript, tooltipTilte: 'Javascript' },
+      { icon: NodeJS, tooltipTilte: 'NodeJS' },
+      { icon: ExpressJS, tooltipTilte: 'Express' },
+      { icon: MongoDB, tooltipTilte: 'MongoDB' }
+    ],
+    category: 'Back-End'
   },
   {
     picture: '/img/forum-app.PNG',
@@ -49,11 +79,29 @@ const portfolios: Portfolio[] = [
     description: 'Aplikasi Forum Diskusi',
     repository: 'https://github.com/adelintang/forum-app-v2',
     techs: [
-      { icon: '/icons/react.svg', alt: 'react-icon' },
-      { icon: '/icons/redux.svg', alt: 'redux-icon' },
-      { icon: '/icons/tailwindcss.svg', alt: 'tailwindcss-icon' }
-    ]
+      { icon: Javascript, tooltipTilte: "Javascript" },
+      { icon: ReactJS, tooltipTilte: "ReactJS" },
+      { icon: Redux, tooltipTilte: "Redux" },
+      { icon: TailwindCSS, tooltipTilte: "TailwindCSS" }
+    ],
+    category: 'Front-End'
   },
+  {
+    picture: '/img/post-it.PNG',
+    alt: 'post-it-api',
+    urlApp: 'https://api-post-it.vercel.app/docs/',
+    name: 'Post It API',
+    description: 'Rest API Post It, mini sosial media',
+    repository: 'https://github.com/adelintang/post-it',
+    techs: [
+      { icon: Typescript, tooltipTilte: 'Typescript' },
+      { icon: NodeJS, tooltipTilte: 'NodeJS' },
+      { icon: ExpressJS, tooltipTilte: 'Express' },
+      { icon: Prisma, tooltipTilte: 'Prisma' },
+      { icon: PostgreSQL, tooltipTilte: 'PostgreSQL' }
+    ],
+    category: 'Back-End'
+  }
 ]
 
 export default function Portfolio() {
@@ -72,10 +120,13 @@ export default function Portfolio() {
                 <p className="mt-3 dark:text-white">{portfolio.description}</p>
                 <a href={portfolio.repository} target="_blank" rel="noopener noreferrer"
                   className="underline text-[#2F74C8]">Repository</a>
+                <p className="text-[#A9A9A9]">#{portfolio.category}</p>
               </div>
               <div className="px-4 mb-4 flex gap-3">
                 {portfolio.techs.map((tech, index) => (
-                  <img src={tech.icon} alt={tech.alt} className="w-8" key={index} />
+                  <Tooltip title={tech.tooltipTilte} key={index}>
+                    {tech.icon}
+                  </Tooltip>
                 ))}
               </div>
             </div>

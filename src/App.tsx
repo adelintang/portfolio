@@ -8,7 +8,7 @@ import Socials from "./components/Socials"
 export default function App() {
   return (
     <>
-      <header className="flex justify-between items-center px-8 lg:px-14 shadow-md dark:shadow dark:shadow-slate-700 bg-white dark:bg-dark sticky top-0">
+      <header className="flex justify-between items-center px-8 lg:px-14 shadow-md dark:shadow dark:shadow-slate-700 bg-white dark:bg-dark sticky top-0 z-20">
         <Navbar />
       </header>
       <Profile />

@@ -42,7 +42,7 @@ export default function About() {
             <SiTailwindcss className="text-3xl text-[#06B6D4] cursor-pointer" />
           </Tooltip>
           <Tooltip title="ReactJS">
-            <FaReact className="text-3xl text-[#61DBFB] cursor-pointer" />
+            <FaReact className="text-2xl text-[#61DBFB] cursor-pointer" />
           </Tooltip>
           <Tooltip title="Redux">
             <SiRedux className="text-2xl text-[#764abc] cursor-pointer" />

@@ -28,7 +28,7 @@ export default function About() {
           If you interesting, contact me.
         </p>
         <h2 className="text-lg font-semibold text-[#aaa] my-4">#skills</h2>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center flex-wrap">
           <Tooltip title="Javascript">
             <SiJavascript className="text-2xl text-[#F0DB4F] cursor-pointer" />
           </Tooltip>

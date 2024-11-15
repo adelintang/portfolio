@@ -3,7 +3,7 @@ interface Experience {
   company: string
   status: string
   periode: string
-  program: string
+  program?: string
 }
 
 const experiences: Experience[] = [
@@ -18,8 +18,14 @@ const experiences: Experience[] = [
     name: 'Frontend & Backend Developer',
     company: 'Solo Technopark',
     status: 'Magang',
-    periode: 'Feb 2024 - Present',
+    periode: 'Feb 2024 - Mar 2024',
     program: 'Magang Divisi IT Solo Technopark'
+  },
+  {
+    name: 'Backend Developer',
+    company: 'Hudoro Solusi Digital',
+    status: 'Fulltime Remote',
+    periode: 'Apr 2024 - Jul 2024',
   }
 ]
 

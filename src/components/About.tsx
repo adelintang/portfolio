@@ -6,6 +6,7 @@ import {
   SiPrisma,
   SiMongodb,
   SiMysql,
+  SiNestjs,
 } from "react-icons/si";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -48,7 +49,14 @@ export default function About() {
             <SiRedux className="text-2xl text-[#764abc] cursor-pointer" />
           </Tooltip>
           <Tooltip title="Express">
-            <img src="/icons/express.svg" alt="express-icon" className="w-8 cursor-pointer" />
+            <img
+              src="/icons/express.svg"
+              alt="express-icon"
+              className="w-8 cursor-pointer"
+            />
+          </Tooltip>
+          <Tooltip title="Nestjs">
+            <SiNestjs className="text-2xl cursor-pointer" />
           </Tooltip>
           <Tooltip title="Prisma">
             <SiPrisma className="text-2xl cursor-pointer" />

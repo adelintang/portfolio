@@ -56,7 +56,7 @@ export default function About() {
             />
           </Tooltip>
           <Tooltip title="Nestjs">
-            <SiNestjs className="text-2xl cursor-pointer" />
+            <SiNestjs className="text-2xl text-[#E0234E] cursor-pointer" />
           </Tooltip>
           <Tooltip title="Prisma">
             <SiPrisma className="text-2xl cursor-pointer" />

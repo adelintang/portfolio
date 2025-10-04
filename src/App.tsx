@@ -1,9 +1,9 @@
-import About from "./components/About"
-import Experiences from "./components/Experiences"
-import Navbar from "./components/Navbar"
-import Portfolio from "./components/Portfolio"
-import Profile from "./components/Profile"
-import Socials from "./components/Socials"
+import About from "./components/About";
+import Experiences from "./components/Experiences";
+import Navbar from "./components/Navbar";
+import Portfolio from "./components/Portfolio";
+import Profile from "./components/Profile";
+import Socials from "./components/Socials";
 
 export default function App() {
   return (
@@ -17,8 +17,10 @@ export default function App() {
       <Socials />
       <Experiences />
       <footer className="bg-dark p-4">
-        <p className="text-white text-center">&copy; 2024 adelintang. All rights reserved.</p>
+        <p className="text-white text-center">
+          &copy; 2025 adelintang. All rights reserved.
+        </p>
       </footer>
     </>
-  )
+  );
 }

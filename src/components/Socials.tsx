@@ -26,7 +26,7 @@ const socials: Social[] = [
   },
   {
     urlSocial:
-      "https://api.whatsapp.com/send/?phone=6285290021422&text&type=phone_number&app_absent=0",
+      "https://api.whatsapp.com/send/?phone=6287882688410&text&type=phone_number&app_absent=0",
     urlIcon: "/icons/whatsapp.png",
     alt: "whatsapp-icon",
     name: "WhatsApp",

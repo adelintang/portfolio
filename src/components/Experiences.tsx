@@ -23,13 +23,13 @@ const experiences: Experience[] = [
   },
   {
     name: "Backend Developer",
-    company: "Hudoro Solusi Digital",
+    company: "PT. Hudoro Solusi Digital",
     status: "Fulltime Remote",
     periode: "Apr 2024 - Jul 2024",
   },
   {
     name: "Backend Developer",
-    company: "Lifetech Tanpa Batas",
+    company: "PT. Lifetech Tanpa Batas",
     status: "Kontrak",
     periode: "Apr 2025 - Saat ini",
   },
